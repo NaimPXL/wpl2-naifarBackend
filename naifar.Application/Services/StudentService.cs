@@ -1,0 +1,33 @@
+﻿using naifar.Application.Framework;
+using naifar.Domain;
+using naifar.Infrastructure.Repositories;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace naifar.Application.Services
+{
+    public class StudentService
+    {
+        private readonly StudentRepository _repository;
+        public StudentService(string connectionString)
+        {
+            _repository = new StudentRepository(connectionString);
+        }
+        public SelectResult<Student> GetStudents()
+        {
+            SelectResult<Student> selectResult = new SelectResult<Student>();
+            try
+            {
+                selectResult.Rows = _repository.GetAll();
+            }
+            catch (Exception ex)
+            {
+                selectResult.Errors.Add(ex.Message);
+            }
+            return selectResult;
+        }
+    }
+}
