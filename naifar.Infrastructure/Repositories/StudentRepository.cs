@@ -24,5 +24,17 @@ namespace naifar.Infrastructure.Repositories
             ";
             return connection.Query<Student>(sql).ToList();
         }
+
+        public void Add(Student student)
+        {
+            using var connection = CreateConnection();
+            string sql = @"INSERT INTO Students (FirstName, LastName) VALUES
+                    (@FirstName, @LastName);";
+            connection.Execute(sql, new
+            {
+                FirstName = student.FirstName,
+                LastName = student.LastName
+            });
+        }
     }
 }

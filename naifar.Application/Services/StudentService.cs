@@ -29,5 +29,20 @@ namespace naifar.Application.Services
             }
             return selectResult;
         }
+
+        public InsertResult AddStudent(string firstName, string lastName)
+        {
+            InsertResult insertResult = new InsertResult();
+            try
+            {
+                Student student = new Student(firstName, lastName);
+                _repository.Add(student);
+            }
+            catch (Exception ex)
+            {
+                insertResult.Errors.Add(ex.Message);
+            }
+            return insertResult;
+        }
     }
 }

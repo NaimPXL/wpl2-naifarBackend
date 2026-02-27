@@ -8,10 +8,54 @@ namespace naifar.Domain
 {
     public class Student
     {
-        public int Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public Student() { }
+        private static int IdGenerator = 0;
+
+        public int ID { get; set; }
+
+        private string? firstName;
+
+        public string? FirstName
+        {
+            get { return firstName; }
+            set {
+                if (String.IsNullOrEmpty(value))
+                {
+                    firstName = "John";
+                }
+                else
+                {
+                    firstName = value;
+                }
+            }
+        }
+
+        private string? lastName;
+
+        public string? LastName
+        {
+            get { return lastName; }
+            set {
+                if (String.IsNullOrEmpty(value))
+                {
+                    lastName = "Doe";
+                }
+                else
+                {
+                    lastName = value;
+                }
+            }
+        }
+
+
+        public Student()
+        {
+            IdGenerator++;
+            ID = IdGenerator;
+        }
+        public Student(string firstName, string lastName) : this() {
+            FirstName = firstName;
+            LastName = lastName;
+        }
         public override string ToString()
         {
             return $"{FirstName} {LastName}";

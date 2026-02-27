@@ -9,8 +9,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\naifar.Application\naifar.Application.csproj" />
-    <ProjectReference Include="..\naifar.Domain\naifar.Domain.csproj" />
+    <ProjectReference Include="..\naifar.Application\NaiFar.Application.csproj" />
+    <ProjectReference Include="..\naifar.Domain\NaiFar.Domain.csproj" />
   </ItemGroup>
 
   <ItemGroup>

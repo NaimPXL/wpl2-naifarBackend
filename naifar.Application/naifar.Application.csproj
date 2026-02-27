@@ -7,8 +7,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\naifar.Domain\naifar.Domain.csproj" />
-    <ProjectReference Include="..\naifar.Infrastructure\naifar.Infrastructure.csproj" />
+    <ProjectReference Include="..\naifar.Domain\NaiFar.Domain.csproj" />
+    <ProjectReference Include="..\naifar.Infrastructure\NaiFar.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

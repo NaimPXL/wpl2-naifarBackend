@@ -3,15 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.14.37012.4
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naifar.Application", "naifar.Application\naifar.Application.csproj", "{B93C6336-682C-4BEF-B534-D47E4AD5B4DA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.Application", "naifar.Application\NaiFar.Application.csproj", "{B93C6336-682C-4BEF-B534-D47E4AD5B4DA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naifar.Domain", "naifar.Domain\naifar.Domain.csproj", "{1D730F5E-278F-45F9-90F0-C9094E9D9260}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.Domain", "naifar.Domain\NaiFar.Domain.csproj", "{1D730F5E-278F-45F9-90F0-C9094E9D9260}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naifar.Infrastructure", "naifar.Infrastructure\naifar.Infrastructure.csproj", "{83D7E9C0-D2E6-459B-8AD4-60676C9207CA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.Infrastructure", "naifar.Infrastructure\NaiFar.Infrastructure.csproj", "{83D7E9C0-D2E6-459B-8AD4-60676C9207CA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naifar.WebApi", "naifar.WebApi\naifar.WebApi.csproj", "{2CAD7471-FF02-4D0A-9498-499B6E5C470A}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.WebApi", "naifar.WebApi\NaiFar.WebApi.csproj", "{2CAD7471-FF02-4D0A-9498-499B6E5C470A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "naifar.WpfApp", "naifar.WpfApp\naifar.WpfApp.csproj", "{9B3AAE13-548D-4D0B-BF9A-FAC35464B922}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.WpfApp", "naifar.WpfApp\NaiFar.WpfApp.csproj", "{9B3AAE13-548D-4D0B-BF9A-FAC35464B922}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NaiFar.Testing", "naifar.Testing\NaiFar.Testing.csproj", "{35F36867-AD5C-4C96-8345-908AA6DA6C6D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{1D730F5E-278F-45F9-90F0-C9094E9D9260} = {1D730F5E-278F-45F9-90F0-C9094E9D9260}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +44,10 @@ Global
 		{9B3AAE13-548D-4D0B-BF9A-FAC35464B922}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9B3AAE13-548D-4D0B-BF9A-FAC35464B922}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9B3AAE13-548D-4D0B-BF9A-FAC35464B922}.Release|Any CPU.Build.0 = Release|Any CPU
+		{35F36867-AD5C-4C96-8345-908AA6DA6C6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{35F36867-AD5C-4C96-8345-908AA6DA6C6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{35F36867-AD5C-4C96-8345-908AA6DA6C6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{35F36867-AD5C-4C96-8345-908AA6DA6C6D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
