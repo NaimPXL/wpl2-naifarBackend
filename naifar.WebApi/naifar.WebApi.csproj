@@ -10,4 +10,9 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\naifar.Application\NaiFar.Application.csproj" />
+    <ProjectReference Include="..\naifar.Domain\NaiFar.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
